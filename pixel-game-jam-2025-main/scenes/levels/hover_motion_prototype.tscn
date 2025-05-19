@@ -57,10 +57,12 @@ position = Vector2(62, 25)
 position = Vector2(163, 88)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
 position = Vector2(-81.3298, -44.7566)
 navigation_polygon = SubResource("NavigationPolygon_8bw7e")
 
 [node name="paths" type="Node2D" parent="NavigationRegion2D"]
+visible = false
 position = Vector2(81.3298, 44.7566)
 
 [node name="diver_path_1" type="Path2D" parent="NavigationRegion2D/paths"]
