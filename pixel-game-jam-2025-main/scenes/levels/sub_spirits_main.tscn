@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://cfp3gjcdtq8ej"]
+[gd_scene load_steps=24 format=4 uid="uid://cfp3gjcdtq8ej"]
 
 [ext_resource type="Texture2D" uid="uid://cncahtoji1sn3" path="res://sprites/tileset_interior_1.png" id="1_jw64b"]
 [ext_resource type="PackedScene" uid="uid://bnhalxexub6qn" path="res://scenes/characters/diver_basic.tscn" id="2_1v5rg"]
@@ -37,15 +37,27 @@ sources/0 = SubResource("TileSetAtlasSource_1v5rg")
 sources/1 = SubResource("TileSetAtlasSource_r3u0v")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_pva72"]
-vertices = PackedVector2Array(776.688, 155.758, 797.273, 116.758, 796.391, 252.047, 773.977, 232.898, 667.172, 256.07, 631.93, 230.891, 622.328, 644.648, 788.57, 646.523, 732.531, 715.789, 471.391, 717.719, 629.969, 280.031, 669.492, 396.609, 766.023, 116.758, 579.469, 155.758, 508.922, 310.758, 510.656, 339.227, 447.422, 336.227, 405.148, 310.758, 404.508, 346.758, 416.688, 346.758, 452.117, 392.609, 414.953, 395.602, 404.25, 511.672, 403.398, 394.633, 526.609, 510.68, 652.094, 420.617, 531.148, 393.93, 778.789, 400.359, 797.078, 399.344, 796.547, 422.617, 409, 656.25, 408.148, 645.617, 564.328, 643.633, 409.148, 589.883, 408.523, 555.93, 530.109, 557.938, 564.328, 591.891, 654.094, 505.758, 624.594, 505.758, 757.898, 344.281, 698.141, 341.242, 697.531, 310.758, 797.531, 310.758, 781.789, 340.297, 486.398, 80.7578, 767.023, 83.6484, 427.328, 153.617, 440.328, 111.547, 622.328, 586.867, 678.328, 478.68, 796.25, 477.828, 795.398, 584.867, 678.328, 563.758, 623.063, 563.758, 440.328, 81.5781, 408.188, 115.703, 405.344, 136.344, 408.102, 257.773, 427.328, 232.688, 533.5, 259.93, 569.906, 233.688, 572.961, 284.531, 798.117, 339.344, 754.75, 397.898)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 2, 4, 5), PackedInt32Array(6, 7, 8, 9), PackedInt32Array(10, 5, 4, 11), PackedInt32Array(12, 1, 0, 13), PackedInt32Array(14, 15, 16, 17), PackedInt32Array(18, 17, 16, 19), PackedInt32Array(19, 16, 20, 21), PackedInt32Array(22, 23, 21, 24), PackedInt32Array(25, 24, 21, 20, 26, 11), PackedInt32Array(27, 28, 29, 25), PackedInt32Array(9, 30, 31, 32, 6), PackedInt32Array(33, 34, 35, 36), PackedInt32Array(25, 37, 38), PackedInt32Array(39, 40, 41, 42, 43), PackedInt32Array(44, 45, 12, 13, 46, 47), PackedInt32Array(48, 6, 32, 36), PackedInt32Array(49, 50, 51, 52), PackedInt32Array(52, 51, 48, 53), PackedInt32Array(47, 54, 44), PackedInt32Array(55, 47, 46, 56), PackedInt32Array(57, 56, 46, 58), PackedInt32Array(59, 57, 58, 60), PackedInt32Array(59, 60, 61, 26), PackedInt32Array(42, 62, 43), PackedInt32Array(39, 43, 27, 63), PackedInt32Array(63, 27, 25, 11), PackedInt32Array(53, 48, 36, 35, 24, 38), PackedInt32Array(61, 10, 11, 26), PackedInt32Array(24, 25, 38)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(737.33, 725.757, 467.33, 727.757, 399.33, 660.757, 397.33, 635.757, 554.33, 633.757, 554.33, 601.757, 399.33, 599.757, 398.33, 545.757, 519.33, 547.757, 517.33, 520.757, 394.33, 521.757, 393.33, 383.757, 405.33, 384.757, 406.33, 356.757, 394.33, 356.757, 395.33, 300.757, 518.33, 300.757, 521.33, 349.757, 458.33, 346.757, 461.33, 382.757, 521.33, 383.757, 523.33, 269.757, 407.33, 267.757, 407.33, 267.757, 398.33, 267.757, 395.33, 135.757, 399.33, 106.757, 430.33, 102.757, 430.33, 71.7566, 486.33, 70.7566, 777.33, 73.7566, 776.33, 106.757, 807.33, 106.757, 806.33, 261.757, 677.33, 265.757, 679.33, 386.757, 745.33, 387.757, 747.33, 353.757, 688.33, 350.757, 687.33, 300.757, 807.33, 300.757, 808.33, 348.757, 791.33, 349.757, 789.33, 389.757, 807.33, 388.757, 806.33, 432.757, 662.33, 430.757, 664.33, 515.757, 634.33, 515.757, 633.33, 553.757, 668.33, 553.757, 668.33, 468.757, 806.33, 467.757, 805.33, 594.757, 632.33, 596.757, 632.33, 634.757, 809.33, 636.757), PackedVector2Array(437.33, 163.757, 437.33, 222.757, 579.33, 223.757, 582.33, 273.757, 620.33, 270.757, 622.33, 220.757, 764.33, 222.757, 766.33, 165.757, 579.33, 165.757)])
+vertices = PackedVector2Array(776.688, 155.758, 797.273, 116.758, 796.391, 252.047, 773.977, 232.898, 667.172, 256.07, 631.93, 230.891, 622.328, 644.648, 788.57, 646.523, 732.531, 715.789, 471.391, 717.719, 629.969, 280.031, 669.492, 396.609, 766.023, 116.758, 579.469, 155.758, 508.922, 310.758, 510.656, 339.227, 447.422, 336.227, 405.148, 310.758, 404.508, 346.758, 416.688, 346.758, 452.117, 392.609, 414.953, 395.602, 406.102, 507.602, 403.57, 394.648, 538.953, 505.602, 652.094, 420.617, 531.148, 393.93, 778.789, 400.359, 797.078, 399.344, 796.547, 422.617, 409, 656.25, 408.148, 645.617, 564.328, 643.633, 564.328, 591.891, 409.148, 589.883, 408.523, 556.078, 535.742, 560.063, 619.063, 563.758, 622.328, 586.867, 654.094, 505.758, 620.594, 505.758, 757.898, 344.281, 698.141, 341.242, 697.531, 310.758, 797.531, 310.758, 781.789, 340.297, 486.398, 80.7578, 767.023, 83.6484, 427.328, 153.617, 440.328, 111.547, 678.328, 478.68, 796.25, 477.828, 795.398, 584.867, 678.328, 563.758, 440.328, 81.5781, 408.188, 115.703, 405.344, 136.344, 408.102, 257.773, 427.328, 232.688, 533.5, 259.93, 569.906, 233.688, 572.961, 284.531, 798.117, 339.344, 754.75, 397.898)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 2, 4, 5), PackedInt32Array(6, 7, 8, 9), PackedInt32Array(10, 5, 4, 11), PackedInt32Array(12, 1, 0, 13), PackedInt32Array(14, 15, 16, 17), PackedInt32Array(18, 17, 16, 19), PackedInt32Array(19, 16, 20, 21), PackedInt32Array(22, 23, 21, 24), PackedInt32Array(25, 24, 21, 20, 26, 11), PackedInt32Array(27, 28, 29, 25), PackedInt32Array(9, 30, 31, 32, 6), PackedInt32Array(33, 34, 35, 36, 37, 38), PackedInt32Array(25, 39, 40, 24), PackedInt32Array(41, 42, 43, 44, 45), PackedInt32Array(46, 47, 12, 13, 48, 49), PackedInt32Array(38, 6, 32, 33), PackedInt32Array(50, 51, 52, 53), PackedInt32Array(53, 52, 38, 37), PackedInt32Array(49, 54, 46), PackedInt32Array(55, 49, 48, 56), PackedInt32Array(57, 56, 48, 58), PackedInt32Array(59, 57, 58, 60), PackedInt32Array(59, 60, 61, 26), PackedInt32Array(44, 62, 45), PackedInt32Array(41, 45, 27, 63), PackedInt32Array(63, 27, 25, 11), PackedInt32Array(61, 10, 11, 26), PackedInt32Array(24, 40, 37, 36)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(737.33, 725.757, 467.33, 727.757, 399.33, 660.757, 397.33, 635.757, 554.33, 633.757, 554.33, 601.757, 399.33, 599.757, 398.33, 545.757, 526.33, 549.757, 528.33, 515.757, 396.33, 517.757, 393.33, 383.757, 405.33, 384.757, 406.33, 356.757, 394.33, 356.757, 395.33, 300.757, 518.33, 300.757, 521.33, 349.757, 458.33, 346.757, 461.33, 382.757, 521.33, 383.757, 523.33, 269.757, 407.33, 267.757, 407.33, 267.757, 398.33, 267.757, 395.33, 135.757, 399.33, 106.757, 430.33, 102.757, 430.33, 71.7566, 486.33, 70.7566, 777.33, 73.7566, 776.33, 106.757, 807.33, 106.757, 806.33, 261.757, 677.33, 265.757, 679.33, 386.757, 745.33, 387.757, 747.33, 353.757, 688.33, 350.757, 687.33, 300.757, 807.33, 300.757, 808.33, 348.757, 791.33, 349.757, 789.33, 389.757, 807.33, 388.757, 806.33, 432.757, 662.33, 430.757, 664.33, 515.757, 630.33, 515.757, 629.33, 553.757, 668.33, 553.757, 668.33, 468.757, 806.33, 467.757, 805.33, 594.757, 632.33, 596.757, 632.33, 634.757, 809.33, 636.757), PackedVector2Array(437.33, 163.757, 437.33, 222.757, 579.33, 223.757, 582.33, 273.757, 620.33, 270.757, 622.33, 220.757, 764.33, 222.757, 766.33, 165.757, 579.33, 165.757)])
 
 [sub_resource type="Curve2D" id="Curve2D_qb626"]
 _data = {
-"points": PackedVector2Array(-1.50074, 1.83105, 1.50074, -1.83105, 204, 37, -3.40526, -1.96693, 3.40526, 1.96693, 312, 36, -4.49761, -2.58419, 4.49761, 2.58419, 315, 127, 0.029391, -0.013227, -0.029391, 0.013227, 200, 128, 0.0188786, 1.01187, -0.0188786, -1.01187, 201, 114, 0, 0, 0, 0, 200, 75)
+"points": PackedVector2Array(-1.50074, 1.83105, 1.50074, -1.83105, 204, 37, -3.40526, -1.96693, 3.40526, 1.96693, 312, 36, -4.49761, -2.58419, 4.49761, 2.58419, 315, 115, 0.029391, -0.013227, -0.029391, 0.013227, 200, 119, 0.0188786, 1.01187, -0.0188786, -1.01187, 200, 102, 0, 0, 0, 0, 200, 75, 0, 0, 0, 0, 204, 37)
 }
-point_count = 6
+point_count = 7
+
+[sub_resource type="Curve2D" id="Curve2D_pva72"]
+_data = {
+"points": PackedVector2Array(-1.50074, 1.83105, 1.50074, -1.83105, 204, 37, 0, 0, 0, 0, 476, 40, -3.40526, -1.96693, 3.40526, 1.96693, 348, 42, -4.49761, -2.58419, 4.49761, 2.58419, 353, 118, 0.029391, -0.013227, -0.029391, 0.013227, 113, 118, 0.0188786, 1.01187, -0.0188786, -1.01187, 115, 74, 0, 0, 0, 0, 117, 39, 0, 0, 0, 0, 204, 37)
+}
+point_count = 8
+
+[sub_resource type="Curve2D" id="Curve2D_fjsb7"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 292, 119, 0, 0, 0, 0, 116, 119, 0, 0, 0, 0, 116, 41, 0, 0, 0, 0, 471, 40, 0, 0, 0, 0, 350, 43, 0, 0, 0, 0, 353, 117, 0, 0, 0, 0, 292, 119)
+}
+point_count = 7
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kew44"]
 size = Vector2(32, 630)
@@ -109,21 +121,29 @@ rotates = false
 scale = Vector2(0.75, 0.75)
 return_point = NodePath("../../../../../return point 1")
 
-[node name="diver_basic2" parent="NavigationRegion2D" instance=ExtResource("2_1v5rg")]
-position = Vector2(451.33, 438.757)
-scale = Vector2(0.75, 0.75)
+[node name="diver_path_2" type="Path2D" parent="NavigationRegion2D/paths"]
+position = Vector2(216, 320)
+curve = SubResource("Curve2D_pva72")
 
-[node name="diver_basic3" parent="NavigationRegion2D" instance=ExtResource("2_1v5rg")]
-position = Vector2(579.33, 454.757)
-scale = Vector2(0.75, 0.75)
+[node name="PathFollow2D" type="PathFollow2D" parent="NavigationRegion2D/paths/diver_path_2"]
+position = Vector2(204, 37)
+rotates = false
 
-[node name="diver_basic4" parent="NavigationRegion2D" instance=ExtResource("2_1v5rg")]
-position = Vector2(485.33, 186.757)
+[node name="diver_basic" parent="NavigationRegion2D/paths/diver_path_2/PathFollow2D" node_paths=PackedStringArray("return_point") instance=ExtResource("2_1v5rg")]
 scale = Vector2(0.75, 0.75)
+return_point = NodePath("../../../../../return point 1")
 
-[node name="diver_basic5" parent="NavigationRegion2D" instance=ExtResource("2_1v5rg")]
-position = Vector2(630.33, 187.757)
+[node name="diver_path_3" type="Path2D" parent="NavigationRegion2D/paths"]
+position = Vector2(216, 320)
+curve = SubResource("Curve2D_fjsb7")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="NavigationRegion2D/paths/diver_path_3"]
+position = Vector2(292, 119)
+rotates = false
+
+[node name="diver_basic" parent="NavigationRegion2D/paths/diver_path_3/PathFollow2D" node_paths=PackedStringArray("return_point") instance=ExtResource("2_1v5rg")]
 scale = Vector2(0.75, 0.75)
+return_point = NodePath("../../../../../return point 1")
 
 [node name="impassable_walls" type="StaticBody2D" parent="."]
 visible = false

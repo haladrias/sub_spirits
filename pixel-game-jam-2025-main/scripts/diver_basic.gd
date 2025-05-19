@@ -8,9 +8,9 @@ extends CharacterBody2D
 @export var return_point : Area2D
 
 var state = "path"
-@export var max_speed := 80.00
+@export var max_speed := 100.00
 @export var acceleration := 1000.00
-@export var path_speed = 50
+@export var path_speed = 70
 
 var last_path_position = Vector2(0,0)
 var last_position = global_position
@@ -52,7 +52,7 @@ func _process(delta):
 				velocity = Vector2.ZERO
 				state = "path"
 		"path":
-			#parent.progress += delta * path_speed
+			parent.progress += delta * path_speed
 			
 			var direction = (global_position - last_position)
 			

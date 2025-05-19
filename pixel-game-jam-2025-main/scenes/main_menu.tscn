@@ -53,5 +53,9 @@ scroll_active = false
 stream = ExtResource("4_wu84c")
 autoplay = true
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 328)
+zoom = Vector2(1.185, 1.185)
+
 [connection signal="pressed" from="UI/BoxContainer/VBoxContainer/start_game" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="UI/BoxContainer/VBoxContainer/exit_game" to="." method="_on_exit_game_pressed"]
