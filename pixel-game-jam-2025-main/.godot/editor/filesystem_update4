@@ -8,3 +8,9 @@ res://scenes/characters/ghost_brother.tscn
 res://scripts/ghost_sister.gd
 res://scripts/ghost_brother.gd
 res://scripts/diver_basic.gd
+res://scenes/characters/hover_character_body_2d.tscn
+res://scripts/hover_character_body_2d.gd
+res://scenes/levels/cage.tscn
+res://scripts/cage.gd
+res://scenes/key.tscn
+res://scripts/key.gd

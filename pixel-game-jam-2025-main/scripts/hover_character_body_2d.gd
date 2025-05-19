@@ -6,13 +6,13 @@ extends CharacterBody2D
 @onready var sprite = $AnimatedSprite2D
 
 # constants
-const MAX_SPEED = 200
-const ACCEL = 1000.0
-const FRICTION = 500
+const MAX_SPEED = 100
+const ACCEL = 600.0
+const FRICTION = 300
 
 # vars
 var input = Vector2.ZERO
-
+var has_key = false
 
 #endregion
 

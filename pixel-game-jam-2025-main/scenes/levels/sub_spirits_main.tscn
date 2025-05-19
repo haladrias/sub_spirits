@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://cfp3gjcdtq8ej"]
+[gd_scene load_steps=22 format=4 uid="uid://cfp3gjcdtq8ej"]
 
 [ext_resource type="Texture2D" uid="uid://cncahtoji1sn3" path="res://sprites/tileset_interior_1.png" id="1_jw64b"]
 [ext_resource type="PackedScene" uid="uid://bnhalxexub6qn" path="res://scenes/characters/diver_basic.tscn" id="2_1v5rg"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://b4ldvqcuan1b1" path="res://scenes/characters/ghost_sister.tscn" id="3_l5epu"]
 [ext_resource type="PackedScene" uid="uid://c75p61vrcf48v" path="res://scenes/characters/ghost_brother.tscn" id="4_vj0f0"]
 [ext_resource type="AudioStream" uid="uid://cxyx2h2ox6hg2" path="res://sounds/main theme.mp3" id="6_qb626"]
+[ext_resource type="PackedScene" uid="uid://d2kvss2ufe5mx" path="res://scenes/levels/cage.tscn" id="8_r3u0v"]
+[ext_resource type="PackedScene" uid="uid://dodnn8l43jlk5" path="res://scenes/key.tscn" id="9_pva72"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1v5rg"]
 texture = ExtResource("1_jw64b")
@@ -81,11 +83,11 @@ position = Vector2(353, 531)
 scale = Vector2(0.720002, 0.68)
 
 [node name="ghost_sister" parent="." instance=ExtResource("3_l5epu")]
-position = Vector2(390, 592)
+position = Vector2(406, 632)
 scale = Vector2(0.720002, 0.68)
 
 [node name="ghost_brother" parent="." instance=ExtResource("4_vj0f0")]
-position = Vector2(549, 592)
+position = Vector2(629, 632)
 scale = Vector2(0.720002, 0.68)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
@@ -108,20 +110,20 @@ rotates = false
 [node name="diver_basic" parent="NavigationRegion2D/paths/diver_path_1/PathFollow2D" node_paths=PackedStringArray("return_point") instance=ExtResource("2_1v5rg")]
 return_point = NodePath("../../../../../return point 1")
 
-[node name="diver_basic2" parent="." instance=ExtResource("2_1v5rg")]
-position = Vector2(370, 394)
+[node name="diver_basic2" parent="NavigationRegion2D" instance=ExtResource("2_1v5rg")]
+position = Vector2(451.33, 438.757)
 scale = Vector2(0.760005, 0.52)
 
-[node name="diver_basic3" parent="." instance=ExtResource("2_1v5rg")]
-position = Vector2(498, 410)
+[node name="diver_basic3" parent="NavigationRegion2D" instance=ExtResource("2_1v5rg")]
+position = Vector2(579.33, 454.757)
 scale = Vector2(0.760005, 0.52)
 
-[node name="diver_basic4" parent="." instance=ExtResource("2_1v5rg")]
-position = Vector2(404, 142)
+[node name="diver_basic4" parent="NavigationRegion2D" instance=ExtResource("2_1v5rg")]
+position = Vector2(485.33, 186.757)
 scale = Vector2(0.760005, 0.52)
 
-[node name="diver_basic5" parent="." instance=ExtResource("2_1v5rg")]
-position = Vector2(549, 143)
+[node name="diver_basic5" parent="NavigationRegion2D" instance=ExtResource("2_1v5rg")]
+position = Vector2(630.33, 187.757)
 scale = Vector2(0.760005, 0.52)
 
 [node name="impassable_walls" type="StaticBody2D" parent="."]
@@ -351,6 +353,7 @@ position = Vector2(93, -47)
 shape = SubResource("RectangleShape2D_j2ll0")
 
 [node name="return point 1" type="Area2D" parent="."]
+position = Vector2(-240, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="return point 1"]
 position = Vector2(577, 513)
@@ -362,3 +365,12 @@ debug_color = Color(0.917647, 0.247059, 0.368627, 1)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_qb626")
 autoplay = true
+
+[node name="cage" parent="." instance=ExtResource("8_r3u0v")]
+position = Vector2(407, 631)
+
+[node name="cage2" parent="." instance=ExtResource("8_r3u0v")]
+position = Vector2(630, 631)
+
+[node name="key" parent="." instance=ExtResource("9_pva72")]
+position = Vector2(659, 422)

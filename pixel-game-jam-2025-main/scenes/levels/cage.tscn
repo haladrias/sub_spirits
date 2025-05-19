@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2kvss2ufe5mx"]
+
+[ext_resource type="Script" uid="uid://c5e13uuf1rtr4" path="res://scripts/cage.gd" id="1_df0if"]
+[ext_resource type="Texture2D" uid="uid://ducni4eipekiy" path="res://sprites/cage.png" id="1_l8olp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8olp"]
+size = Vector2(50, 48)
+
+[node name="cage" type="Node2D"]
+script = ExtResource("1_df0if")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_l8olp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(14, -16, 11, -16, -14, -16, -14, -12, -14, 16, -11, 16, 11, 16, 14, 16, 14, 12, 11, 12, -11, 12, -11, -12, 11, -12, 11, 12, 14, 12)
+
+[node name="player_detector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_detector"]
+shape = SubResource("RectangleShape2D_l8olp")
+
+[node name="E" type="Label" parent="."]
+visible = false
+offset_left = -5.0
+offset_top = -41.0
+offset_right = 4.0
+offset_bottom = -18.0
+text = "E"

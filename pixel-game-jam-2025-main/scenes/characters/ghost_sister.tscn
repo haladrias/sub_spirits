@@ -57,7 +57,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5xa61"]
-radius = 29.0689
+radius = 32.0
 
 [node name="ghost_sister" type="CharacterBody2D"]
 script = ExtResource("1_5xa61")
@@ -74,8 +74,7 @@ autoplay = "default"
 [node name="Camera2D" type="Camera2D" parent="."]
 enabled = false
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="player_collider" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_collider"]
 shape = SubResource("CircleShape2D_5xa61")

@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
+@onready var player_collider: Area2D = $player_collider
 
-
-@export var max_speed := 150.00
-@export var acceleration := 250.00
+@export var max_speed := 90.00
+@export var acceleration := 200.00
 
 
 func _physics_process(delta: float) -> void:
@@ -14,11 +14,13 @@ func _physics_process(delta: float) -> void:
 	var desired_velocity := direction * speed
 	velocity = velocity.move_toward(desired_velocity, acceleration * delta)
 	move_and_slide()
+	
+	var bodies = player_collider.get_overlapping_bodies()
+	if bodies != null:
+		for body in bodies:
+			if body.is_in_group("player"):
+				velocity = -velocity
 
 
 func get_global_player_position() -> Vector2:
 	return get_tree().root.get_node("sub_spirits_main/Player").global_position
-
-func _on_player_collider_body_entered(body):
-	if body.is_in_group("Player"):
-		velocity *= 0.9
