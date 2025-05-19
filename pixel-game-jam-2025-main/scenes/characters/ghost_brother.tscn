@@ -1,0 +1,156 @@
+[gd_scene load_steps=19 format=3 uid="uid://c75p61vrcf48v"]
+
+[ext_resource type="Texture2D" uid="uid://c8g1fhsxf618w" path="res://sprites/lil raveshading sprsht.png" id="1_gcwbo"]
+[ext_resource type="Script" uid="uid://bwo2o3qde00ab" path="res://scripts/ghost_brother.gd" id="1_i48iw"]
+[ext_resource type="Texture2D" uid="uid://dpixnh7t3mc2d" path="res://sprites/brother_sprtsht.png" id="2_i48iw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8apet"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xqio"]
+atlas = ExtResource("1_gcwbo")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h58lw"]
+atlas = ExtResource("1_gcwbo")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djhu8"]
+atlas = ExtResource("1_gcwbo")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5afb"]
+atlas = ExtResource("1_gcwbo")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuao3"]
+atlas = ExtResource("1_gcwbo")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yergt"]
+atlas = ExtResource("1_gcwbo")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cs4no"]
+atlas = ExtResource("2_i48iw")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccc5n"]
+atlas = ExtResource("2_i48iw")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhs5n"]
+atlas = ExtResource("2_i48iw")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anem5"]
+atlas = ExtResource("2_i48iw")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3wmn"]
+atlas = ExtResource("2_i48iw")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xiauo"]
+atlas = ExtResource("2_i48iw")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n78si"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6xqio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h58lw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djhu8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a5afb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuao3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yergt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cs4no")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ccc5n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhs5n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anem5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3wmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xiauo")
+}],
+"loop": true,
+"name": &"ghost_father",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i48iw"]
+radius = 27.0
+
+[node name="ghost_brother" type="CharacterBody2D"]
+script = ExtResource("1_i48iw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_8apet")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.5, -0.5)
+scale = Vector2(0.895833, 0.895833)
+sprite_frames = SubResource("SpriteFrames_n78si")
+animation = &"ghost_father"
+autoplay = "ghost_father"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
+
+[node name="player_collider" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_collider"]
+shape = SubResource("CircleShape2D_i48iw")
+
+[node name="Raycasts" type="Node2D" parent="."]
+
+[node name="RayCast2D" type="RayCast2D" parent="Raycasts"]
+target_position = Vector2(0, 51)
+
+[node name="RayCast2D2" type="RayCast2D" parent="Raycasts"]
+target_position = Vector2(39, 36)
+
+[node name="RayCast2D3" type="RayCast2D" parent="Raycasts"]
+target_position = Vector2(55, 0)
+
+[node name="RayCast2D4" type="RayCast2D" parent="Raycasts"]
+target_position = Vector2(-34, 37)
+
+[node name="RayCast2D5" type="RayCast2D" parent="Raycasts"]
+target_position = Vector2(-56, 0)
+
+[node name="RayCast2D6" type="RayCast2D" parent="Raycasts"]
+target_position = Vector2(38, -33)
+
+[node name="RayCast2D7" type="RayCast2D" parent="Raycasts"]
+target_position = Vector2(-36, -34)
+
+[node name="RayCast2D8" type="RayCast2D" parent="Raycasts"]
+target_position = Vector2(0, -42)
+
+[connection signal="body_entered" from="player_collider" to="." method="_on_player_collider_body_entered"]

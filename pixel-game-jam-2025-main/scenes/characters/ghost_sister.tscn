@@ -1,0 +1,80 @@
+[gd_scene load_steps=12 format=3 uid="uid://b4ldvqcuan1b1"]
+
+[ext_resource type="Script" uid="uid://bvt1uaip3jruh" path="res://scripts/ghost_sister.gd" id="1_5xa61"]
+[ext_resource type="Texture2D" uid="uid://wkjbu0thobfq" path="res://sprites/sister_sprtsht.png" id="1_xsi83"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dha0a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xa61"]
+atlas = ExtResource("1_xsi83")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oul4t"]
+atlas = ExtResource("1_xsi83")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukr4u"]
+atlas = ExtResource("1_xsi83")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8tc1d"]
+atlas = ExtResource("1_xsi83")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rlsvf"]
+atlas = ExtResource("1_xsi83")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qyuh"]
+atlas = ExtResource("1_xsi83")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bisas"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xa61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oul4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukr4u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8tc1d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rlsvf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qyuh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5xa61"]
+radius = 29.0689
+
+[node name="ghost_sister" type="CharacterBody2D"]
+script = ExtResource("1_5xa61")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_dha0a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.5, -2.38419e-07)
+scale = Vector2(0.895833, 0.875)
+sprite_frames = SubResource("SpriteFrames_bisas")
+autoplay = "default"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_5xa61")

@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://bhf8p8tkn20mi"]
+
+[ext_resource type="Script" uid="uid://c4qwbo7v43grv" path="res://scripts/hover_character_body_2d.gd" id="1_tlk35"]
+[ext_resource type="Texture2D" uid="uid://c8g1fhsxf618w" path="res://sprites/lil raveshading sprsht.png" id="2_fqc5w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kmk8"]
+atlas = ExtResource("2_fqc5w")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8h5dg"]
+atlas = ExtResource("2_fqc5w")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6g1x"]
+atlas = ExtResource("2_fqc5w")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k147l"]
+atlas = ExtResource("2_fqc5w")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjrls"]
+atlas = ExtResource("2_fqc5w")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_setih"]
+atlas = ExtResource("2_fqc5w")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l7dud"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kmk8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8h5dg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6g1x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k147l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjrls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_setih")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8h5dg"]
+radius = 9.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_layer = 3
+collision_mask = 15
+script = ExtResource("1_tlk35")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_l7dud")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["player"]]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_8h5dg")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3.5, 3.5)
+position_smoothing_enabled = true
