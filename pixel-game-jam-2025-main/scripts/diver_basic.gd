@@ -36,7 +36,7 @@ func _process(delta):
 	
 	match state:
 		"return":
-			var direction = Vector3()
+			var direction = Vector2()
 			
 			nav_agent.set_target_position(return_point.global_position)
 			
@@ -52,7 +52,7 @@ func _process(delta):
 				velocity = Vector2.ZERO
 				state = "path"
 		"path":
-			parent.progress += delta * path_speed
+			#parent.progress += delta * path_speed
 			
 			var direction = (global_position - last_position)
 			
@@ -82,7 +82,7 @@ func _process(delta):
 
 
 func get_global_player_position() -> Vector2:
-	return get_tree().root.get_node("HoverMotionPrototype/Player").global_position
+	return get_tree().root.get_node("sub_spirits_main/Player").global_position
 
 func _on_light_beam_area_body_entered(body):
 	if body.is_in_group("player"):#when you switch active ghost that ghost gets put in the group player

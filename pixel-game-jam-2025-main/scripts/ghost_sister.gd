@@ -2,14 +2,14 @@ extends CharacterBody2D
 
 
 
-@export var max_speed := 200.00
-@export var acceleration := 600.00
+@export var max_speed := 150.00
+@export var acceleration := 250.00
 
 
 func _physics_process(delta: float) -> void:
 	var direction := global_position.direction_to(get_global_player_position())
 	var distance := global_position.distance_to(get_global_player_position())
-	var speed := max_speed if distance > 100 else  max_speed * distance / 250
+	var speed := max_speed if distance > 100 else max_speed * distance / 100
 
 	var desired_velocity := direction * speed
 	velocity = velocity.move_toward(desired_velocity, acceleration * delta)

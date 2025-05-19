@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://kjo4sefkfo2x"]
+[gd_scene load_steps=5 format=3 uid="uid://kjo4sefkfo2x"]
 
+[ext_resource type="Script" uid="uid://cmqq0d88ef0ff" path="res://scenes/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://lnwrhcxi037e" path="res://sprites/sub_spirits_title_card.webp" id="1_ekxnf"]
 [ext_resource type="Theme" uid="uid://cere32uan5mcu" path="res://scenes/game_jam_theme.tres" id="2_bqqt6"]
+[ext_resource type="AudioStream" uid="uid://j3afdhupbxy8" path="res://sounds/title theme.mp3" id="4_wu84c"]
 
 [node name="Main_Menu" type="Node2D"]
+script = ExtResource("1_bqqt6")
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(575, 324.5)
@@ -44,3 +47,10 @@ offset_top = 628.0
 offset_right = 99.0
 offset_bottom = 647.0
 text = "v 0.1.0"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_wu84c")
+autoplay = true
+
+[connection signal="pressed" from="UI/BoxContainer/VBoxContainer/start_game" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="UI/BoxContainer/VBoxContainer/exit_game" to="." method="_on_exit_game_pressed"]

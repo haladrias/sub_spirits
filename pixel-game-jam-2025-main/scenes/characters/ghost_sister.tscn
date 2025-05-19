@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://wkjbu0thobfq" path="res://sprites/sister_sprtsht.png" id="1_xsi83"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dha0a"]
+height = 24.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5xa61"]
 atlas = ExtResource("1_xsi83")

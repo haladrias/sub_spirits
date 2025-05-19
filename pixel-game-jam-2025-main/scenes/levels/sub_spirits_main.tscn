@@ -1,10 +1,11 @@
-[gd_scene load_steps=45 format=4 uid="uid://cfp3gjcdtq8ej"]
+[gd_scene load_steps=47 format=4 uid="uid://cfp3gjcdtq8ej"]
 
 [ext_resource type="Texture2D" uid="uid://cncahtoji1sn3" path="res://sprites/tileset_interior_1.png" id="1_jw64b"]
 [ext_resource type="PackedScene" uid="uid://bnhalxexub6qn" path="res://scenes/characters/diver_basic.tscn" id="2_1v5rg"]
 [ext_resource type="PackedScene" uid="uid://bhf8p8tkn20mi" path="res://scenes/characters/hover_character_body_2d.tscn" id="2_vj0f0"]
 [ext_resource type="PackedScene" uid="uid://b4ldvqcuan1b1" path="res://scenes/characters/ghost_sister.tscn" id="3_l5epu"]
 [ext_resource type="PackedScene" uid="uid://c75p61vrcf48v" path="res://scenes/characters/ghost_brother.tscn" id="4_vj0f0"]
+[ext_resource type="AudioStream" uid="uid://cxyx2h2ox6hg2" path="res://sounds/main theme.mp3" id="6_qb626"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1v5rg"]
 texture = ExtResource("1_jw64b")
@@ -132,6 +133,9 @@ size = Vector2(15, 49.75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mnhq"]
 size = Vector2(34, 17)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_vj0f0"]
+radius = 1.64555
+
 [node name="sub_spirits_main" type="Node2D"]
 
 [node name="tilemap" type="Node2D" parent="."]
@@ -143,13 +147,21 @@ tile_set = SubResource("TileSet_pgbe1")
 
 [node name="Player" parent="." instance=ExtResource("2_vj0f0")]
 position = Vector2(353, 531)
+scale = Vector2(0.720002, 0.68)
+
+[node name="ghost_sister" parent="." instance=ExtResource("3_l5epu")]
+position = Vector2(390, 592)
+scale = Vector2(0.720002, 0.68)
+
+[node name="ghost_brother" parent="." instance=ExtResource("4_vj0f0")]
+position = Vector2(549, 592)
+scale = Vector2(0.720002, 0.68)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 position = Vector2(-81.3298, -44.7566)
 navigation_polygon = SubResource("NavigationPolygon_vj0f0")
 
 [node name="paths" type="Node2D" parent="NavigationRegion2D"]
-visible = false
 position = Vector2(81.3298, 44.7566)
 
 [node name="diver_path_1" type="Path2D" parent="NavigationRegion2D/paths"]
@@ -160,28 +172,24 @@ position = Vector2(-21, -44)
 rotation = -0.659004
 rotates = false
 
-[node name="diver_basic" parent="NavigationRegion2D/paths/diver_path_1/PathFollow2D" instance=ExtResource("2_1v5rg")]
-position = Vector2(151.819, 774.047)
-rotation = 0.659004
-scale = Vector2(1, 0.879995)
-
-[node name="ghost_sister" parent="." instance=ExtResource("3_l5epu")]
-position = Vector2(390, 592)
-
-[node name="ghost_brother" parent="." instance=ExtResource("4_vj0f0")]
-position = Vector2(549, 592)
+[node name="diver_basic" parent="NavigationRegion2D/paths/diver_path_1/PathFollow2D" node_paths=PackedStringArray("return_point") instance=ExtResource("2_1v5rg")]
+return_point = NodePath("../../../../../return point 1")
 
 [node name="diver_basic2" parent="." instance=ExtResource("2_1v5rg")]
 position = Vector2(370, 394)
+scale = Vector2(0.760005, 0.52)
 
 [node name="diver_basic3" parent="." instance=ExtResource("2_1v5rg")]
 position = Vector2(498, 410)
+scale = Vector2(0.760005, 0.52)
 
 [node name="diver_basic4" parent="." instance=ExtResource("2_1v5rg")]
 position = Vector2(404, 142)
+scale = Vector2(0.760005, 0.52)
 
 [node name="diver_basic5" parent="." instance=ExtResource("2_1v5rg")]
 position = Vector2(549, 143)
+scale = Vector2(0.760005, 0.52)
 
 [node name="impassable_walls" type="StaticBody2D" parent="."]
 
@@ -324,3 +332,16 @@ shape = SubResource("RectangleShape2D_mdvux")
 [node name="CollisionShape2D35" type="CollisionShape2D" parent="impassable_walls"]
 position = Vector2(496, 505.5)
 shape = SubResource("RectangleShape2D_3mnhq")
+
+[node name="return point 1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="return point 1"]
+position = Vector2(577, 513)
+rotation = 3.14159
+scale = Vector2(7.22226, -3.21033)
+shape = SubResource("CircleShape2D_vj0f0")
+debug_color = Color(0.917647, 0.247059, 0.368627, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_qb626")
+autoplay = true
