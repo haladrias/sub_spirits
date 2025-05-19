@@ -1,36 +1,38 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1747679214
-icon.svg::CompressedTexture2D/CompressedTexture2D::171316846730724454::1747616859::1747616859::1::::<><><>0<>0<>a23515134887b586a2512ee7e5c6e312<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-README.md::TextFile::-1::1747616859::0::1::::<><><>0<>0<><>::
-::res://scenes/::1747679444
-game_jam_theme.tres::Theme::5088985483002858440::1747676665::0::1::::<><><>0<>0<><>::
-main_menu.tscn::PackedScene::721370613929108685::1747679444::0::1::::<><><>0<>0<><>::uid://cmqq0d88ef0ff::::res://scenes/main_menu.gd<>uid://lnwrhcxi037e::::res://sprites/sub_spirits_title_card.webp<>uid://cere32uan5mcu::::res://scenes/game_jam_theme.tres<>uid://j3afdhupbxy8::::res://sounds/title theme.mp3
-main_menu.gd::GDScript::5649153861892969051::1747679006::0::1::::<>Node2D<><>0<>0<><>::
-::res://scenes/characters/::1747679444
-diver_basic.tscn::PackedScene::3313347154286982481::1747679444::0::1::::<><><>0<>0<><>::uid://hkp4bf4fe47a::::res://scripts/diver_basic.gd<>uid://b2jx8ktdkqlth::::res://sprites/diver_walk_front_sprtsht.png<>uid://cr82afujcr4wh::::res://sprites/light_beam.png<>uid://dsqqut6te4fcv::::res://sprites/diver_walk_back_sprtsht.png<>uid://beo7cebsep55y::::res://sprites/diver_walk_side_sprsht.png
-ghost_brother.tscn::PackedScene::7081783209750882963::1747679444::0::1::::<><><>0<>0<><>::uid://c8g1fhsxf618w::::res://sprites/lil raveshading sprsht.png<>uid://bwo2o3qde00ab::::res://scripts/ghost_brother.gd<>uid://dpixnh7t3mc2d::::res://sprites/brother_sprtsht.png
-ghost_sister.tscn::PackedScene::4444825801513460620::1747679444::0::1::::<><><>0<>0<><>::uid://bvt1uaip3jruh::::res://scripts/ghost_sister.gd<>uid://wkjbu0thobfq::::res://sprites/sister_sprtsht.png
-hover_character_body_2d.tscn::PackedScene::2890096688694149164::1747616859::0::1::::<><><>0<>0<><>::uid://c4qwbo7v43grv::::res://scripts/hover_character_body_2d.gd<>uid://c8g1fhsxf618w::::res://sprites/lil raveshading sprsht.png
-::res://scenes/levels/::1747679444
-hover_motion_prototype.tscn::PackedScene::7362568704049076493::1747679444::0::1::::<><><>0<>0<><>::uid://cncahtoji1sn3::::res://sprites/tileset_interior_1.png<>uid://bhf8p8tkn20mi::::res://scenes/characters/hover_character_body_2d.tscn<>uid://b4ldvqcuan1b1::::res://scenes/characters/ghost_sister.tscn<>uid://c75p61vrcf48v::::res://scenes/characters/ghost_brother.tscn<>uid://bnhalxexub6qn::::res://scenes/characters/diver_basic.tscn
-sub_spirits_main.tscn::PackedScene::5156462518410274981::1747679444::0::1::::<><><>0<>0<><>::uid://cncahtoji1sn3::::res://sprites/tileset_interior_1.png<>uid://bnhalxexub6qn::::res://scenes/characters/diver_basic.tscn<>uid://bhf8p8tkn20mi::::res://scenes/characters/hover_character_body_2d.tscn<>uid://b4ldvqcuan1b1::::res://scenes/characters/ghost_sister.tscn<>uid://c75p61vrcf48v::::res://scenes/characters/ghost_brother.tscn
-::res://scripts/::1747679272
-diver_basic.gd::GDScript::512928287493436420::1747677749::0::1::::<>CharacterBody2D<><>0<>0<><>::
-ghost_brother.gd::GDScript::3961142387719351245::1747678030::0::1::::<>CharacterBody2D<><>0<>0<><>::
-ghost_sister.gd::GDScript::3901223948186701019::1747679272::0::1::::<>CharacterBody2D<><>0<>0<><>::
-hover_character_body_2d.gd::GDScript::6842686222343513791::1747616859::0::1::::<>CharacterBody2D<><>0<>0<><>::
-party.gd::GDScript::493266263749510473::1747616859::0::1::::party_system<>Resource<><>0<>0<><>::
-::res://sounds/::1747679497
-diver_walk_front_sprtsht.png::CompressedTexture2D/CompressedTexture2D::5120577104917127656::1747616859::1747616859::1::::<><><>0<>0<>6e86291fe1b2f585da01d49e4963206c<>res://.godot/imported/diver_walk_front_sprtsht.png-8ae80f91aaf2f1f27590dbcee26beace.ctex::
-main theme.mp3::AudioStreamMP3::6438174954468671083::1747679497::1747679498::1::::<><><>0<>0<>ce938b230b97ffe952d5f9118c6d7520<>res://.godot/imported/main theme.mp3-95329b4f7ff48ba814dd201c75533f4a.mp3str::
-title theme.mp3::AudioStreamMP3::689511268137991269::1747679415::1747679416::1::::<><><>0<>0<>e164066b9e7e1573c1b8ab1b3dc89913<>res://.godot/imported/title theme.mp3-01e543ff7e35c9456e4b0a0a550c458d.mp3str::
-::res://sprites/::1747620050
-brother_sprtsht.png::CompressedTexture2D/CompressedTexture2D::8230029851835017121::1747616859::1747616859::1::::<><><>0<>0<>e073f9b46864ab2d1c9f9037872b9d4a<>res://.godot/imported/brother_sprtsht.png-12d97cd432b6cb1f6384330ead7db456.ctex::
-diver_walk_back_sprtsht.png::CompressedTexture2D/CompressedTexture2D::8456699515093557557::1747616859::1747616859::1::::<><><>0<>0<>f69aa0ccbf665b42edab0f1ac5c9dc11<>res://.godot/imported/diver_walk_back_sprtsht.png-5c70291ac1f192f8462202e27164a00b.ctex::
-diver_walk_front_sprtsht.png::CompressedTexture2D/CompressedTexture2D::4301554838474100857::1747616859::1747616859::1::::<><><>0<>0<>348dc2ff65bf6061d0d8b9fedd3ad003<>res://.godot/imported/diver_walk_front_sprtsht.png-93d4bdb223490a506d0f52a0417ae815.ctex::
-diver_walk_side_sprsht.png::CompressedTexture2D/CompressedTexture2D::2698024074620417348::1747616859::1747616859::1::::<><><>0<>0<>8a92644c03d32be896389b513d58f39d<>res://.godot/imported/diver_walk_side_sprsht.png-b56ff5840ba8c411bcb613e6c5e1be13.ctex::
-light_beam.png::CompressedTexture2D/CompressedTexture2D::6035815827846552751::1747616859::1747616859::1::::<><><>0<>0<>98536411f6acb98a68bf52e55e2b95c7<>res://.godot/imported/light_beam.png-c295b5c98c1c36fd83e03799849c870b.ctex::
-lil raveshading sprsht.png::CompressedTexture2D/CompressedTexture2D::7103047441269958536::1747616859::1747616859::1::::<><><>0<>0<>4070431290c3f1f90227433eb793cdf6<>res://.godot/imported/lil raveshading sprsht.png-74cc30c578bdb3613e8a353881a4f505.ctex::
-sister_sprtsht.png::CompressedTexture2D/CompressedTexture2D::1565347666266405566::1747616859::1747616859::1::::<><><>0<>0<>727b9d93f3a960dc35a4ec1fe2302fdd<>res://.godot/imported/sister_sprtsht.png-c624c0c72c28f4a4a5c21de0eb8c7bf7.ctex::
-sub_spirits_title_card.webp::CompressedTexture2D/CompressedTexture2D::800280694968160092::1747620049::1747620050::1::::<><><>0<>0<>910f7fa012cde73bbb4cc039cc24fd70<>res://.godot/imported/sub_spirits_title_card.webp-6a86e04d55dac0485a3284be7773e7c0.ctex::
-tileset_interior_1.png::CompressedTexture2D/CompressedTexture2D::5689438610737644174::1747616859::1747616859::1::::<><><>0<>0<>5786138a9c9f1235a5cf87bc9516cd60<>res://.godot/imported/tileset_interior_1.png-3ef6398b0466def59bd55110ad8e98f2.ctex::
+::res://::1747690369
+icon.svg::CompressedTexture2D/CompressedTexture2D::171316846730724454::1747616128::1747616344::1::::<><><>0<>0<>a23515134887b586a2512ee7e5c6e312<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+README.md::TextFile::-1::1747616128::0::1::::<><><>0<>0<><>::
+::res://scenes/::1747690522
+game_jam_theme.tres::Theme::5088985483002858440::1747690385::0::1::::<><><>0<>0<><>::
+main_menu.gd::GDScript::-1::1747690369::0::1::::<>Node2D<><>0<>0<><>::
+main_menu.tscn::PackedScene::721370613929108685::1747690522::0::1::::<><><>0<>0<><>::res://scenes/main_menu.gd<>uid://lnwrhcxi037e::::res://sprites/sub_spirits_title_card.webp<>uid://cere32uan5mcu::::res://scenes/game_jam_theme.tres<>uid://j3afdhupbxy8::::res://sounds/title theme.mp3
+::res://scenes/characters/::1747690522
+diver_basic.tscn::PackedScene::3313347154286982481::1747690522::0::1::::<><><>0<>0<><>::uid://hkp4bf4fe47a::::res://scripts/diver_basic.gd<>uid://b2jx8ktdkqlth::::res://sprites/diver_walk_front_sprtsht.png<>uid://cr82afujcr4wh::::res://sprites/light_beam.png<>uid://dsqqut6te4fcv::::res://sprites/diver_walk_back_sprtsht.png<>uid://beo7cebsep55y::::res://sprites/diver_walk_side_sprsht.png
+ghost_brother.tscn::PackedScene::7081783209750882963::1747690522::0::1::::<><><>0<>0<><>::uid://c8g1fhsxf618w::::res://sprites/lil raveshading sprsht.png<>uid://bwo2o3qde00ab::::res://scripts/ghost_brother.gd<>uid://dpixnh7t3mc2d::::res://sprites/brother_sprtsht.png
+ghost_sister.tscn::PackedScene::4444825801513460620::1747690522::0::1::::<><><>0<>0<><>::uid://bvt1uaip3jruh::::res://scripts/ghost_sister.gd<>uid://wkjbu0thobfq::::res://sprites/sister_sprtsht.png
+hover_character_body_2d.tscn::PackedScene::2890096688694149164::1747616128::0::1::::<><><>0<>0<><>::uid://c4qwbo7v43grv::::res://scripts/hover_character_body_2d.gd<>uid://c8g1fhsxf618w::::res://sprites/lil raveshading sprsht.png
+::res://scenes/levels/::1747690748
+hover_motion_prototype.tscn::PackedScene::7362568704049076493::1747690522::0::1::::<><><>0<>0<><>::uid://cncahtoji1sn3::::res://sprites/tileset_interior_1.png<>uid://bhf8p8tkn20mi::::res://scenes/characters/hover_character_body_2d.tscn<>uid://b4ldvqcuan1b1::::res://scenes/characters/ghost_sister.tscn<>uid://c75p61vrcf48v::::res://scenes/characters/ghost_brother.tscn<>uid://bnhalxexub6qn::::res://scenes/characters/diver_basic.tscn
+sub_spirits_main.tscn::PackedScene::5156462518410274981::1747690748::0::1::::<><><>0<>0<><>::uid://cncahtoji1sn3::::res://sprites/tileset_interior_1.png<>uid://bnhalxexub6qn::::res://scenes/characters/diver_basic.tscn<>uid://bhf8p8tkn20mi::::res://scenes/characters/hover_character_body_2d.tscn<>uid://b4ldvqcuan1b1::::res://scenes/characters/ghost_sister.tscn<>uid://c75p61vrcf48v::::res://scenes/characters/ghost_brother.tscn<>uid://cxyx2h2ox6hg2::::res://sounds/main theme.mp3
+::res://scripts/::1747690370
+diver_basic.gd::GDScript::512928287493436420::1747690370::0::1::::<>CharacterBody2D<><>0<>0<><>::
+ghost_brother.gd::GDScript::3961142387719351245::1747690370::0::1::::<>CharacterBody2D<><>0<>0<><>::
+ghost_sister.gd::GDScript::3901223948186701019::1747690370::0::1::::<>CharacterBody2D<><>0<>0<><>::
+hover_character_body_2d.gd::GDScript::6842686222343513791::1747616128::0::1::::<>CharacterBody2D<><>0<>0<><>::
+party.gd::GDScript::493266263749510473::1747616128::0::1::::party_system<>Resource<><>0<>0<><>::
+::res://sounds/::1747690446
+diver_walk_front_sprtsht.png::CompressedTexture2D/CompressedTexture2D::5120577104917127656::1747616128::1747616344::1::::<><><>0<>0<>6e86291fe1b2f585da01d49e4963206c<>res://.godot/imported/diver_walk_front_sprtsht.png-8ae80f91aaf2f1f27590dbcee26beace.ctex::
+main theme.mp3::AudioStreamMP3::6438174954468671083::1747690370::1747690378::1::::<><><>0<>0<>ce938b230b97ffe952d5f9118c6d7520<>res://.godot/imported/main theme.mp3-95329b4f7ff48ba814dd201c75533f4a.mp3str::
+title theme.mp3::AudioStreamMP3::689511268137991269::1747690370::1747690446::1::::<><><>0<>0<>36e46023ee706a47a5c8d2ffa3476f72<>res://.godot/imported/title theme.mp3-01e543ff7e35c9456e4b0a0a550c458d.mp3str::
+::res://sprites/::1747690807
+brother_sprtsht.png::CompressedTexture2D/CompressedTexture2D::8230029851835017121::1747616128::1747616344::1::::<><><>0<>0<>e073f9b46864ab2d1c9f9037872b9d4a<>res://.godot/imported/brother_sprtsht.png-12d97cd432b6cb1f6384330ead7db456.ctex::
+diver_walk_back_sprtsht.png::CompressedTexture2D/CompressedTexture2D::8456699515093557557::1747616128::1747616344::1::::<><><>0<>0<>f69aa0ccbf665b42edab0f1ac5c9dc11<>res://.godot/imported/diver_walk_back_sprtsht.png-5c70291ac1f192f8462202e27164a00b.ctex::
+diver_walk_front_sprtsht.png::CompressedTexture2D/CompressedTexture2D::4301554838474100857::1747616128::1747616344::1::::<><><>0<>0<>348dc2ff65bf6061d0d8b9fedd3ad003<>res://.godot/imported/diver_walk_front_sprtsht.png-93d4bdb223490a506d0f52a0417ae815.ctex::
+diver_walk_side_sprsht.png::CompressedTexture2D/CompressedTexture2D::2698024074620417348::1747616128::1747616344::1::::<><><>0<>0<>8a92644c03d32be896389b513d58f39d<>res://.godot/imported/diver_walk_side_sprsht.png-b56ff5840ba8c411bcb613e6c5e1be13.ctex::
+light_beam.png::CompressedTexture2D/CompressedTexture2D::6035815827846552751::1747616128::1747616344::1::::<><><>0<>0<>98536411f6acb98a68bf52e55e2b95c7<>res://.godot/imported/light_beam.png-c295b5c98c1c36fd83e03799849c870b.ctex::
+lil raveshading sprsht.png::CompressedTexture2D/CompressedTexture2D::7103047441269958536::1747616128::1747616344::1::::<><><>0<>0<>4070431290c3f1f90227433eb793cdf6<>res://.godot/imported/lil raveshading sprsht.png-74cc30c578bdb3613e8a353881a4f505.ctex::
+sister_sprtsht.png::CompressedTexture2D/CompressedTexture2D::1565347666266405566::1747616128::1747616344::1::::<><><>0<>0<>727b9d93f3a960dc35a4ec1fe2302fdd<>res://.godot/imported/sister_sprtsht.png-c624c0c72c28f4a4a5c21de0eb8c7bf7.ctex::
+sub spirits title card.png::CompressedTexture2D::146675895615189888::1747690807::1747690808::1::::<><><>0<>0<>d4ee89051e6412c17943a39067047516<>res://.godot/imported/sub spirits title card.png-993131f5687ac734ea53ed489c989fb3.ctex::
+sub_spirits_title_card.webp::CompressedTexture2D/CompressedTexture2D::800280694968160092::1747620825::1747620860::1::::<><><>0<>0<>910f7fa012cde73bbb4cc039cc24fd70<>res://.godot/imported/sub_spirits_title_card.webp-6a86e04d55dac0485a3284be7773e7c0.ctex::
+sub_tileset_expanded.png::CompressedTexture2D::3191414465149775700::1747690805::1747690805::1::::<><><>0<>0<>320ecb4d8fcf2022841e1a31cf38288b<>res://.godot/imported/sub_tileset_expanded.png-94fe2f6cbd615b52f4e4e696405882bd.ctex::
+tileset_interior_1.png::CompressedTexture2D/CompressedTexture2D::5689438610737644174::1747616128::1747616344::1::::<><><>0<>0<>5786138a9c9f1235a5cf87bc9516cd60<>res://.godot/imported/tileset_interior_1.png-3ef6398b0466def59bd55110ad8e98f2.ctex::

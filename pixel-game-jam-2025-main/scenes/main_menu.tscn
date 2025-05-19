@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://kjo4sefkfo2x"]
 
-[ext_resource type="Script" uid="uid://cmqq0d88ef0ff" path="res://scenes/main_menu.gd" id="1_bqqt6"]
-[ext_resource type="Texture2D" uid="uid://lnwrhcxi037e" path="res://sprites/sub_spirits_title_card.webp" id="1_ekxnf"]
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Theme" uid="uid://cere32uan5mcu" path="res://scenes/game_jam_theme.tres" id="2_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://cdby3smsw43e" path="res://sprites/sub spirits title card.png" id="2_wu84c"]
 [ext_resource type="AudioStream" uid="uid://j3afdhupbxy8" path="res://sounds/title theme.mp3" id="4_wu84c"]
 
 [node name="Main_Menu" type="Node2D"]
@@ -11,7 +11,7 @@ script = ExtResource("1_bqqt6")
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(575, 324.5)
 scale = Vector2(1.21905, 0.865333)
-texture = ExtResource("1_ekxnf")
+texture = ExtResource("2_wu84c")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -47,6 +47,7 @@ offset_top = 628.0
 offset_right = 99.0
 offset_bottom = 647.0
 text = "v 0.1.0"
+scroll_active = false
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_wu84c")
