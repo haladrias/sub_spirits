@@ -5,3 +5,5 @@ res://scenes/levels/hover_motion_prototype.tscn
 res://scenes/characters/diver_basic.tscn
 res://scenes/characters/ghost_sister.tscn
 res://scenes/characters/ghost_brother.tscn
+res://scripts/ghost_sister.gd
+res://scripts/ghost_brother.gd

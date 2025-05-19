@@ -25,7 +25,7 @@ func _physics_process(delta: float) -> void:
 
 
 func get_global_player_position() -> Vector2:
-	return get_tree().root.get_node("HoverMotionPrototype/Player").global_position
+	return get_tree().root.get_node("sub_spirits_main/Player").global_position
 
 
 func _on_player_collider_body_entered(body):
