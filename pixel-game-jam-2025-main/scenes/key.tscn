@@ -173,6 +173,7 @@ script = ExtResource("1_fttkb")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_udwwn")
+autoplay = "default"
 
 [node name="player_detector" type="Area2D" parent="."]
 

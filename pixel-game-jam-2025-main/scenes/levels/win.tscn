@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcr6f0fjymcnw"]
+
+[ext_resource type="Script" uid="uid://b5d6x783yqf8u" path="res://scripts/win.gd" id="1_fpces"]
+[ext_resource type="Texture2D" uid="uid://bkbe63vive8ij" path="res://sprites/win.png" id="1_nn6w6"]
+[ext_resource type="Theme" uid="uid://cere32uan5mcu" path="res://scenes/game_jam_theme.tres" id="2_dhd0j"]
+[ext_resource type="AudioStream" uid="uid://j3afdhupbxy8" path="res://sounds/title theme.mp3" id="4_b1jmx"]
+
+[node name="win" type="Node2D"]
+script = ExtResource("1_fpces")
+
+[node name="Win" type="Sprite2D" parent="."]
+position = Vector2(683, 384)
+texture = ExtResource("1_nn6w6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 114.0
+offset_top = 139.0
+offset_right = 210.0
+offset_bottom = 205.0
+scale = Vector2(1.5, 1.5)
+theme = ExtResource("2_dhd0j")
+
+[node name="retry" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Retry"
+
+[node name="main menu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Main Menu"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_b1jmx")
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="VBoxContainer/main menu" to="." method="_on_main_menu_pressed"]

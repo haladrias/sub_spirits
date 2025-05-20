@@ -108,6 +108,8 @@ animations = [{
 radius = 32.0
 
 [node name="ghost_brother" type="CharacterBody2D"]
+collision_layer = 16
+collision_mask = 32
 script = ExtResource("1_i48iw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -119,9 +121,6 @@ scale = Vector2(0.895833, 0.895833)
 sprite_frames = SubResource("SpriteFrames_n78si")
 animation = &"ghost_father"
 autoplay = "ghost_father"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-enabled = false
 
 [node name="player_collider" type="Area2D" parent="."]
 

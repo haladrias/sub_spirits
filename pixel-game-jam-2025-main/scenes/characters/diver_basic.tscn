@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bnhalxexub6qn"]
+[gd_scene load_steps=30 format=3 uid="uid://bnhalxexub6qn"]
 
 [ext_resource type="Script" uid="uid://hkp4bf4fe47a" path="res://scripts/diver_basic.gd" id="1_otxqr"]
 [ext_resource type="Texture2D" uid="uid://b2jx8ktdkqlth" path="res://sprites/diver_walk_front_sprtsht.png" id="1_s7aiq"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dsqqut6te4fcv" path="res://sprites/diver_walk_back_sprtsht.png" id="2_ruqcm"]
 [ext_resource type="Texture2D" uid="uid://beo7cebsep55y" path="res://sprites/diver_walk_side_sprsht.png" id="4_diccy"]
 [ext_resource type="AudioStream" uid="uid://7nuy8c6k2ogg" path="res://sounds/footstep_diver.mp3" id="6_diccy"]
+[ext_resource type="Script" uid="uid://cixyqeeyq3gmc" path="res://scripts/killer.gd" id="7_v1gsq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v1gsq"]
 atlas = ExtResource("2_ruqcm")
@@ -111,10 +112,10 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_otxqr"]
 radius = 7.0
-height = 52.0
+height = 26.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_otxqr"]
-radius = 98.0204
+radius = 89.0056
 
 [sub_resource type="Animation" id="Animation_diccy"]
 length = 0.001
@@ -448,6 +449,10 @@ _data = {
 &"walk_up": SubResource("Animation_woyw0")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_diccy"]
+radius = 11.0
+height = 60.0
+
 [node name="diver_basic" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_otxqr")
@@ -458,6 +463,7 @@ animation = &"walk_front"
 autoplay = "walk_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 14)
 shape = SubResource("CapsuleShape2D_otxqr")
 
 [node name="light_beam" type="Sprite2D" parent="."]
@@ -497,5 +503,12 @@ stream = ExtResource("6_diccy")
 autoplay = true
 max_distance = 99.0
 
+[node name="killer" type="Area2D" parent="."]
+script = ExtResource("7_v1gsq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killer"]
+shape = SubResource("CapsuleShape2D_diccy")
+
 [connection signal="body_entered" from="light_beam/light_beam_area" to="." method="_on_light_beam_area_body_entered"]
 [connection signal="body_exited" from="player_chaser" to="." method="_on_player_chaser_body_exited"]
+[connection signal="body_entered" from="killer" to="killer" method="_on_body_entered"]

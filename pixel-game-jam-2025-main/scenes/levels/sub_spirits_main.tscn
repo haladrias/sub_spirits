@@ -1,14 +1,20 @@
-[gd_scene load_steps=26 format=4 uid="uid://cfp3gjcdtq8ej"]
+[gd_scene load_steps=32 format=4 uid="uid://cfp3gjcdtq8ej"]
 
+[ext_resource type="Texture2D" uid="uid://dlaorcty3tn2n" path="res://sprites/rly_dark_blu.png" id="1_11n4l"]
 [ext_resource type="Texture2D" uid="uid://cncahtoji1sn3" path="res://sprites/tileset_interior_1.png" id="1_jw64b"]
 [ext_resource type="PackedScene" uid="uid://bnhalxexub6qn" path="res://scenes/characters/diver_basic.tscn" id="2_1v5rg"]
 [ext_resource type="Texture2D" uid="uid://blp7eoik7u5ho" path="res://sprites/sub_tileset_expanded.png" id="2_kew44"]
 [ext_resource type="PackedScene" uid="uid://bhf8p8tkn20mi" path="res://scenes/characters/hover_character_body_2d.tscn" id="2_vj0f0"]
 [ext_resource type="PackedScene" uid="uid://b4ldvqcuan1b1" path="res://scenes/characters/ghost_sister.tscn" id="3_l5epu"]
 [ext_resource type="PackedScene" uid="uid://c75p61vrcf48v" path="res://scenes/characters/ghost_brother.tscn" id="4_vj0f0"]
+[ext_resource type="PackedScene" uid="uid://eeb0qmpxpqq" path="res://scenes/characters/ghost_dad.tscn" id="6_fjsb7"]
 [ext_resource type="AudioStream" uid="uid://cxyx2h2ox6hg2" path="res://sounds/main theme.mp3" id="6_qb626"]
+[ext_resource type="PackedScene" uid="uid://cov5q3q2w613f" path="res://scenes/characters/ghost_mom.tscn" id="7_xcym4"]
+[ext_resource type="PackedScene" uid="uid://bgqox1tkm13lg" path="res://scenes/characters/ghost_grandma.tscn" id="8_j2ll0"]
 [ext_resource type="PackedScene" uid="uid://d2kvss2ufe5mx" path="res://scenes/levels/cage.tscn" id="8_r3u0v"]
 [ext_resource type="PackedScene" uid="uid://dodnn8l43jlk5" path="res://scenes/key.tscn" id="9_pva72"]
+[ext_resource type="AudioStream" uid="uid://co3eko2h8oncw" path="res://sounds/dramatic theme.mp3" id="11_ba02d"]
+[ext_resource type="PackedScene" uid="uid://cghhyr4245y76" path="res://scenes/levels/door.tscn" id="14_8ovp5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1v5rg"]
 texture = ExtResource("1_jw64b")
@@ -49,13 +55,13 @@ point_count = 7
 
 [sub_resource type="Curve2D" id="Curve2D_pva72"]
 _data = {
-"points": PackedVector2Array(-1.50074, 1.83105, 1.50074, -1.83105, 204, 37, 0, 0, 0, 0, 476, 40, -3.40526, -1.96693, 3.40526, 1.96693, 348, 42, -4.49761, -2.58419, 4.49761, 2.58419, 353, 118, 0.029391, -0.013227, -0.029391, 0.013227, 113, 118, 0.0188786, 1.01187, -0.0188786, -1.01187, 115, 74, 0, 0, 0, 0, 117, 39, 0, 0, 0, 0, 204, 37)
+"points": PackedVector2Array(-1.50074, 1.83105, 1.50074, -1.83105, 204, 37, 0, 0, 0, 0, 476, 36, -3.40526, -1.96693, 3.40526, 1.96693, 348, 36, -4.49761, -2.58419, 4.49761, 2.58419, 353, 118, 0.029391, -0.013227, -0.029391, 0.013227, 113, 118, 0.0188786, 1.01187, -0.0188786, -1.01187, 115, 74, 0, 0, 0, 0, 117, 39, 0, 0, 0, 0, 204, 37)
 }
 point_count = 8
 
 [sub_resource type="Curve2D" id="Curve2D_fjsb7"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 292, 119, 0, 0, 0, 0, 116, 119, 0, 0, 0, 0, 116, 41, 0, 0, 0, 0, 471, 40, 0, 0, 0, 0, 350, 43, 0, 0, 0, 0, 353, 117, 0, 0, 0, 0, 292, 119)
+"points": PackedVector2Array(0, 0, 0, 0, 292, 119, 0, 0, 0, 0, 116, 119, 0, 0, 0, 0, 116, 41, 0, 0, 0, 0, 471, 34, 0, 0, 0, 0, 351, 36, 0, 0, 0, 0, 353, 117, 0, 0, 0, 0, 292, 119)
 }
 point_count = 7
 
@@ -94,6 +100,11 @@ radius = 1.64555
 
 [node name="sub_spirits_main" type="Node2D"]
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(540.5, 395.5)
+scale = Vector2(4.0957, 2.78711)
+texture = ExtResource("1_11n4l")
+
 [node name="tilemap" type="Node2D" parent="."]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="tilemap"]
@@ -113,6 +124,15 @@ scale = Vector2(0.720002, 0.68)
 [node name="ghost_brother" parent="." instance=ExtResource("4_vj0f0")]
 position = Vector2(629, 632)
 scale = Vector2(0.720002, 0.68)
+
+[node name="ghost_dad" parent="." instance=ExtResource("6_fjsb7")]
+position = Vector2(410, 279)
+
+[node name="ghost_mom" parent="." instance=ExtResource("7_xcym4")]
+position = Vector2(633, 279)
+
+[node name="ghost_grandma" parent="." instance=ExtResource("8_j2ll0")]
+position = Vector2(521, 73)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 position = Vector2(-81.3298, -44.7566)
@@ -168,7 +188,7 @@ rotates = false
 [node name="diver_basic" parent="NavigationRegion2D/paths/diver_path_4/PathFollow2D" node_paths=PackedStringArray("return_point") instance=ExtResource("2_1v5rg")]
 scale = Vector2(0.75, 0.75)
 return_point = NodePath("../../../../../return point 1")
-max_speed = 110.0
+max_speed = 100.0
 path_speed = 90
 
 [node name="diver_path_5" type="Path2D" parent="NavigationRegion2D/paths"]
@@ -182,12 +202,14 @@ rotates = false
 [node name="diver_basic" parent="NavigationRegion2D/paths/diver_path_5/PathFollow2D" node_paths=PackedStringArray("return_point") instance=ExtResource("2_1v5rg")]
 scale = Vector2(0.75, 0.75)
 return_point = NodePath("../../../../../return point 1")
-max_speed = 110.0
+max_speed = 100.0
 path_speed = 90
 
 [node name="impassable_walls" type="StaticBody2D" parent="."]
 visible = false
 position = Vector2(508, 328)
+collision_layer = 497
+collision_mask = 497
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="impassable_walls"]
 position = Vector2(-203, -13)
@@ -422,15 +444,48 @@ scale = Vector2(7.22226, -3.21033)
 shape = SubResource("CircleShape2D_vj0f0")
 debug_color = Color(0.917647, 0.247059, 0.368627, 1)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+[node name="main_theme" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_qb626")
 autoplay = true
 
+[node name="tension" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_ba02d")
+
 [node name="cage" parent="." instance=ExtResource("8_r3u0v")]
 position = Vector2(407, 631)
+sis_cage = true
 
 [node name="cage2" parent="." instance=ExtResource("8_r3u0v")]
 position = Vector2(630, 631)
+bro_cage = true
+
+[node name="cage3" parent="." instance=ExtResource("8_r3u0v")]
+position = Vector2(521, 73)
+grandma_cage = true
+
+[node name="cage4" parent="." instance=ExtResource("8_r3u0v")]
+position = Vector2(410, 279)
+dad_cage = true
+
+[node name="cage5" parent="." instance=ExtResource("8_r3u0v")]
+position = Vector2(633, 279)
+mom_cage = true
 
 [node name="key" parent="." instance=ExtResource("9_pva72")]
 position = Vector2(659, 422)
+
+[node name="door" parent="." instance=ExtResource("14_8ovp5")]
+position = Vector2(352, 312)
+parent_door = true
+
+[node name="door2" parent="." instance=ExtResource("14_8ovp5")]
+position = Vector2(688, 312)
+parent_door = true
+
+[node name="door3" parent="." instance=ExtResource("14_8ovp5")]
+position = Vector2(697, 146)
+grandma_door = true
+
+[node name="door4" parent="." instance=ExtResource("14_8ovp5")]
+position = Vector2(345, 146)
+grandma_door = true
