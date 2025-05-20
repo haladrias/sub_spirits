@@ -448,6 +448,7 @@ _data = {
 }
 
 [node name="diver_basic" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_otxqr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -467,8 +468,8 @@ texture = ExtResource("2_fnp3n")
 collision_mask = 3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="light_beam/light_beam_area"]
-position = Vector2(0.631466, 0.249008)
-scale = Vector2(2.26293, 1.49802)
+position = Vector2(0.480606, 0.16964)
+scale = Vector2(1.96121, 1.33929)
 polygon = PackedVector2Array(-2, -32, 1, -32, 14, 27, 7, 31, -8, 31, -15, 27)
 
 [node name="PointLight2D" type="PointLight2D" parent="light_beam"]

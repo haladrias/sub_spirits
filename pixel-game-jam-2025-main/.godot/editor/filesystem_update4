@@ -14,3 +14,7 @@ res://scenes/levels/cage.tscn
 res://scripts/cage.gd
 res://scenes/key.tscn
 res://scripts/key.gd
+res://scripts/diver_basic2.gd
+res://scripts/diver_basic3.gd
+res://scripts/diver_basic4.gd
+res://scenes/characters/diver_basic4.gd

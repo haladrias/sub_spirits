@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://cfp3gjcdtq8ej"]
+[gd_scene load_steps=26 format=4 uid="uid://cfp3gjcdtq8ej"]
 
 [ext_resource type="Texture2D" uid="uid://cncahtoji1sn3" path="res://sprites/tileset_interior_1.png" id="1_jw64b"]
 [ext_resource type="PackedScene" uid="uid://bnhalxexub6qn" path="res://scenes/characters/diver_basic.tscn" id="2_1v5rg"]
@@ -58,6 +58,18 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 292, 119, 0, 0, 0, 0, 116, 119, 0, 0, 0, 0, 116, 41, 0, 0, 0, 0, 471, 40, 0, 0, 0, 0, 350, 43, 0, 0, 0, 0, 353, 117, 0, 0, 0, 0, 292, 119)
 }
 point_count = 7
+
+[sub_resource type="Curve2D" id="Curve2D_xcym4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 291, 113, 0, 0, 0, 0, 146, 112, 0, 0, 0, 0, 146, 61, 0, 0, 0, 0, 304, 51, 0, 0, 0, 0, 462, 51, 0, 0, 0, 0, 465, 115, 0, 0, 0, 0, 390, 113, 0, 0, 0, 0, 333, 113, 0, 0, 0, 0, 291, 113)
+}
+point_count = 9
+
+[sub_resource type="Curve2D" id="Curve2D_j2ll0"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 334, 66, 0, 0, 0, 0, 463, 66, 0, 0, 0, 0, 463, 107, 0, 0, 0, 0, 151, 108, 0, 0, 0, 0, 149, 68, 0, 0, 0, 0, 325, 68)
+}
+point_count = 6
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kew44"]
 size = Vector2(32, 630)
@@ -144,6 +156,34 @@ rotates = false
 [node name="diver_basic" parent="NavigationRegion2D/paths/diver_path_3/PathFollow2D" node_paths=PackedStringArray("return_point") instance=ExtResource("2_1v5rg")]
 scale = Vector2(0.75, 0.75)
 return_point = NodePath("../../../../../return point 1")
+
+[node name="diver_path_4" type="Path2D" parent="NavigationRegion2D/paths"]
+position = Vector2(216, -24)
+curve = SubResource("Curve2D_xcym4")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="NavigationRegion2D/paths/diver_path_4"]
+position = Vector2(291, 113)
+rotates = false
+
+[node name="diver_basic" parent="NavigationRegion2D/paths/diver_path_4/PathFollow2D" node_paths=PackedStringArray("return_point") instance=ExtResource("2_1v5rg")]
+scale = Vector2(0.75, 0.75)
+return_point = NodePath("../../../../../return point 1")
+max_speed = 110.0
+path_speed = 90
+
+[node name="diver_path_5" type="Path2D" parent="NavigationRegion2D/paths"]
+position = Vector2(216, -24)
+curve = SubResource("Curve2D_j2ll0")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="NavigationRegion2D/paths/diver_path_5"]
+position = Vector2(334, 66)
+rotates = false
+
+[node name="diver_basic" parent="NavigationRegion2D/paths/diver_path_5/PathFollow2D" node_paths=PackedStringArray("return_point") instance=ExtResource("2_1v5rg")]
+scale = Vector2(0.75, 0.75)
+return_point = NodePath("../../../../../return point 1")
+max_speed = 110.0
+path_speed = 90
 
 [node name="impassable_walls" type="StaticBody2D" parent="."]
 visible = false
