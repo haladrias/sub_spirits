@@ -1,10 +1,11 @@
-[gd_scene load_steps=27 format=3 uid="uid://bnhalxexub6qn"]
+[gd_scene load_steps=28 format=3 uid="uid://bnhalxexub6qn"]
 
 [ext_resource type="Script" uid="uid://hkp4bf4fe47a" path="res://scripts/diver_basic.gd" id="1_otxqr"]
 [ext_resource type="Texture2D" uid="uid://b2jx8ktdkqlth" path="res://sprites/diver_walk_front_sprtsht.png" id="1_s7aiq"]
 [ext_resource type="Texture2D" uid="uid://cr82afujcr4wh" path="res://sprites/light_beam.png" id="2_fnp3n"]
 [ext_resource type="Texture2D" uid="uid://dsqqut6te4fcv" path="res://sprites/diver_walk_back_sprtsht.png" id="2_ruqcm"]
 [ext_resource type="Texture2D" uid="uid://beo7cebsep55y" path="res://sprites/diver_walk_side_sprsht.png" id="4_diccy"]
+[ext_resource type="AudioStream" uid="uid://7nuy8c6k2ogg" path="res://sounds/footstep_diver.mp3" id="6_diccy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v1gsq"]
 atlas = ExtResource("2_ruqcm")
@@ -490,6 +491,11 @@ libraries = {
 &"": SubResource("AnimationLibrary_diccy")
 }
 autoplay = "walk_down"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_diccy")
+autoplay = true
+max_distance = 99.0
 
 [connection signal="body_entered" from="light_beam/light_beam_area" to="." method="_on_light_beam_area_body_entered"]
 [connection signal="body_exited" from="player_chaser" to="." method="_on_player_chaser_body_exited"]
